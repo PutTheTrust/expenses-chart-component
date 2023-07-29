@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        cyan: "Cyan: hsl(186, 34%, 60%)",
+        cyan: "hsl(186, 34%, 60%)",
         red: "hsl(10, 79%, 65%)",
         "dark-brown": "hsl(25, 47%, 15%)",
         "medium-brown": "hsl(28, 10%, 53%)",
