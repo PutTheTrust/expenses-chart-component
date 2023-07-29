@@ -1,9 +1,12 @@
+import data from "./assets/data/data.json";
+
 import logo from "./assets/logo.svg";
 import Tooltip from "./components/tooltip";
 
-function App() {
+const App = () => {
+  console.log(data);
   return (
-    <div className=" mx-4 flex flex-col justify-center mx-auto h-screen max-w-[540px]">
+    <div className=" mx-4 flex flex-col justify-center md:mx-auto h-screen max-w-[540px]">
       <div className="flex justify-between items-center bg-red w-full  rounded-xl h-[97px] px-[21px]">
         <div className=" text-white">
           <p className="text-sm">My balance</p>
@@ -16,19 +19,16 @@ function App() {
       <div className="w-full mt-6 bg-white p-[42px] px-[21px] rounded-xl">
         <h1 className="font-bold text-2xl">Spending - Last 7 days</h1>
 
-        <div className="h-[250px] bg-green-500 mt-4 flex items-end justify-between">
-          <div className="w-[33px] h-[51px] bg-slate-700 rounded-md" />
-          <div className="w-[33px] h-[88px] bg-slate-700 rounded-md" />
-          <div className="w-[33px] h-1/2 bg-slate-700 rounded-md" />
-          <div className="w-[33px] h-[80%] bg-cyan tooltip">
-            <Tooltip text="$15.45" />
-          </div>
-          <div className="w-[33px] h-[51px] bg-slate-700 tooltip">
-            <Tooltip text="$52.36" />
-          </div>
-          <div className="w-[33px] h-[51px] bg-slate-700 rounded-md" />
-          <div className="w-[33px] h-[33px] bg-slate-700 rounded-md" />
-          <div className="w-[33px] h-[20px] bg-slate-700 rounded-md" />
+        <div className="h-[250px] mt-4 flex items-end justify-between">
+          {/* {data} */}
+          {data.map((day, idx) => (
+            <Tooltip
+              key={day.day}
+              text={day.day}
+              percentage={day.amount}
+              idx={idx}
+            />
+          ))}
         </div>
 
         <div className="h-[2px] w-full bg-cream mt-4" />
@@ -47,6 +47,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
