@@ -3,7 +3,10 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Expense chart</h1>
+      <div>
+        <p>My balance</p>
+        <p>$921.48</p>
+      </div>
     </div>
   );
 }
