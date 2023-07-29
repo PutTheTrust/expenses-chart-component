@@ -12,7 +12,7 @@ const Tooltip: React.FC<TooltipProps> = ({ percentage, idx, text }) => {
       <div
         className={`${
           idx === date.getDay() ? "bg-cyan" : "bg-red"
-        }  w-[33px] md:w-[51px] tooltip rounded-md`}
+        }  w-[33px] md:w-[51px] tooltip rounded-md hover:bg-[#ff9b86]`}
         style={{ height: `${text}%` }}
       >
         <span className="tooltiptext">{percentage}</span>

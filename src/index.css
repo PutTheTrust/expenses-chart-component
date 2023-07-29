@@ -9,6 +9,7 @@ body {
 
 .tooltip {
   position: relative;
+  cursor: pointer;
 }
 
 .tooltip .tooltiptext {
