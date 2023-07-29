@@ -1,4 +1,5 @@
 import logo from "./assets/logo.svg";
+import Tooltip from "./components/tooltip";
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
           <div className="w-[33px] h-[51px] bg-slate-700 rounded-md" />
           <div className="w-[33px] h-[88px] bg-slate-700 rounded-md" />
           <div className="w-[33px] h-1/2 bg-slate-700 rounded-md" />
-          <div className="w-[33px] h-[80%] bg-cyan rounded-md" />
-          <div className="w-[33px] h-[51px] bg-slate-700 rounded-md" />
+          <div className="w-[33px] h-[80%] bg-cyan tooltip">
+            <Tooltip text="$15.45" />
+          </div>
+          <div className="w-[33px] h-[51px] bg-slate-700 tooltip">
+            <Tooltip text="$52.36" />
+          </div>
           <div className="w-[33px] h-[51px] bg-slate-700 rounded-md" />
           <div className="w-[33px] h-[33px] bg-slate-700 rounded-md" />
           <div className="w-[33px] h-[20px] bg-slate-700 rounded-md" />
