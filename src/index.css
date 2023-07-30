@@ -4,7 +4,9 @@
 
 body {
   @apply text-[18px];
-  @apply bg-custom-orange;
+  /* @apply bg-custom-orange; */
+  background-color: hsl(29, 63%, 92%);
+  font-family: "DM Sans", sans-serif;
 }
 
 .tooltip {
@@ -17,17 +19,21 @@ body {
   background-color: black;
   color: #fff;
   text-align: center;
-  padding-inline: 9px;
-  max-width: 75px;
+  padding-inline: 10px;
+
+  width: 75px;
   height: 42px;
   align-items: center;
   display: inline-flex;
   align-items: center;
-  /* Position the tooltip */
+
   position: absolute;
   z-index: 1;
   top: -48px;
-  left: -13px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
   border-radius: 8px;
 }
 

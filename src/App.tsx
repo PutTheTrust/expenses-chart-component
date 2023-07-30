@@ -10,23 +10,25 @@ const App = () => {
       <div className="flex justify-between items-center bg-red w-full  rounded-xl h-[97px] px-[21px]">
         <div className=" text-white">
           <p className="text-sm">My balance</p>
-          <p className="font-semibold text-xl">$921.48</p>
+          <p className="font-semibold text-xl md:text-3xl">$921.48</p>
         </div>
 
         <img src={logo} alt="logo" width={64} />
       </div>
 
       <div className="w-full mt-6 bg-white p-[42px] px-[21px] rounded-xl">
-        <h1 className="font-bold text-2xl">Spending - Last 7 days</h1>
+        <h1 className="font-bold text-2xl md:text-3xl">
+          Spending - Last 7 days
+        </h1>
 
         <div className="h-[250px] mt-4 flex items-end justify-between">
           {/* {data} */}
-          {data.map((day, idx) => (
+          {data.map((day) => (
             <Tooltip
               key={day.day}
               text={day.day}
               percentage={day.amount}
-              idx={idx}
+              idx={day.id}
             />
           ))}
         </div>
